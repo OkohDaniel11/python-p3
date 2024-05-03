@@ -1,5 +1,3 @@
-
-
 def do_you_want_to_play():
     """
     Check if player wants to run game
@@ -14,10 +12,12 @@ def do_you_want_to_play():
     print("Then another time. Have a nice day 🙂")
     return False
 
+
 def run_game():
     print("Alright! Let us Begin :)\n")
     """
-    Gives user 3 questionnaire to pick if user enters something different tries again
+    Gives user 3 questionnaire to pick if user enters something different
+    tries again
     """
     print("Here are a list of questionnaires you can run:\n"
           "a) General knowledge\n"
@@ -35,6 +35,7 @@ def run_game():
               "Retry again! Please use a,b or c.")
         run_game()
 
+
 def q_restart(score, questionnaire):
     """
     Ask user if they want to try different questions when getting full marks
@@ -42,13 +43,16 @@ def q_restart(score, questionnaire):
     """
     if score == 5:
         response = input("Congratulations! You got a perfect score! "
-                         "Do you want to try a different questionnaire? (yes/no): ")
+                         "Do you want to try a different questionnaire? "
+                         "(yes/no): ")
         if response.lower() == "yes":
             run_game()
         else:
             print("Thanks for playing!")
     else:
-        response = input(f"Do you want to try the {questionnaire} questionnaire again? (yes/no): ")
+        response = input(f"Do you want to try the {questionnaire} "
+                         "questionnaire again? "
+                         "(yes/no): ")
         if response.lower() == "yes":
             if questionnaire == "General knowledge":
                 general_questions()
@@ -59,18 +63,21 @@ def q_restart(score, questionnaire):
             else:
                 print("Invalid questionnaire type.")
         else:
-            return do_you_want_to_play()
+            return run_game()
+
 
 def general_questions():
     """
     If user picks general questions it calls out general questions
     """
-    print('So you have picked General Knowledge. Welcome let us see what you know. 🙂')
+    print("So you have picked General Knowledge. "
+          "Welcome let us see what you know. 🙂")
 
     score = 0
     # question 1
     print("First question...\n")
-    answer = input("Which is the only body part that is fully grown from birth? \n")
+    answer = input("Which is the only body part that is "
+                   "fully grown from birth? \n")
     if answer.lower() == "eyes":
         print('MMM so that is your answer...')
         print('.........')
@@ -129,9 +136,11 @@ def general_questions():
     print('You got ' + str((score / 5) * 100) + ' %')
     q_restart(score, "General knowledge")
 
+
 def geography_questions():
     print("Interesting pick Welcome to Geography")
-    print('For this questionnaire all you will have to type out is one letter a-d.\n')
+    print("For this questionnaire all you will have to "
+          "type out is one letter a-d.\n")
 
     score = 0
     # question 1
@@ -159,7 +168,8 @@ def geography_questions():
     # question 3
     print("Third question...\n")
     answer = input("Where are the Spanish Steps located?\n"
-                   "a) Madrid, Spain\nb) Bogota, Colombia\nc) Quito, Ecuador\nd) Rome, Italy\n")
+                   "a) Madrid, Spain\nb) Bogota, Colombia\n"
+                   "c) Quito, Ecuador\nd) Rome, Italy\n")
     if answer.lower() == "d":
         print('.... Well will you look at that.')
         print('Correct you got it right 🙂\n')
@@ -177,7 +187,8 @@ def geography_questions():
         score += 1
     else:
         print('..... Should I be shocked.')
-        print('BOO you got it wrong :(. Correct answer would be Serbia or Ukraine.\n')
+        print("BOO you got it wrong :(. Correct"
+              " answer would be Serbia or Ukraine.\n")
     # question 5
     print("Fifth question...\n")
     answer = input("What season does Australia experience in December?\n"
@@ -193,6 +204,7 @@ def geography_questions():
     print('You got ' + str(score) + ' out of 5 questions right!')
     print('You got ' + str((score / 5) * 100) + ' %\n')
     q_restart(score, "Geography")
+
 
 def computer_questions():
     print('So you have picked Computer Questionnaire Welcome.\n')
@@ -215,7 +227,8 @@ def computer_questions():
         print('BOO you got it wrong :(. Correct answer is cd and dvd player\n')
     # question 3
     print('Third question....\n')
-    answer = input("What memory below is the largest?\na) 1TB\nb) 1GB\nc) 55000Bytes\nd) 10GB\n")
+    answer = input("What memory below is the largest?\na) 1TB\nb)"
+                   " 1GB\nc) 55000Bytes\nd) 10GB\n")
     if answer.lower() == "a":
         print('⭐Correct you got it right 🙂⭐\n')
         score += 1
@@ -223,7 +236,8 @@ def computer_questions():
         print('BOO you got it wrong :(. Correct answer is a\n')
     # question 4
     print('Fourth question....\n')
-    answer = input("You need an internet browser to access the Internet. (True/False)\n")
+    answer = input("You need an internet browser to access "
+                   "the Internet. (True/False)\n")
     if answer.lower() == "true":
         print('⭐Correct you got it right 🙂⭐\n')
         score += 1
@@ -242,6 +256,7 @@ def computer_questions():
     print('You got ' + str((score / 5) * 100) + ' %\n')
     q_restart(score, "Computer")
 
+
 do_you_want_to_play()
-#run_game()
+
 
