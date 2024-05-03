@@ -31,7 +31,8 @@ def run_game():
     elif choice.lower() == "c":
         computer_questions()
     else:
-        print('Invalid letter what you typed in is not on our list. Retry again! Please use a,b or c.')
+        print("Invalid letter what you typed in is not on our list. "
+              "Retry again! Please use a,b or c.")
         run_game()
 
 def q_restart(score, questionnaire):
@@ -58,7 +59,7 @@ def q_restart(score, questionnaire):
             else:
                 print("Invalid questionnaire type.")
         else:
-            return run_game()
+            return do_you_want_to_play()
 
 def general_questions():
     """
