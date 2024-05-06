@@ -1,1 +1,1 @@
-bot: python quiz.py
+python: python quiz.py
