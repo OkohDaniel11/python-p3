@@ -3,12 +3,12 @@ def do_you_want_to_play():
     Check if player wants to run game
     """
     print('Welcome to my Quiz Game 🙂')
-    for _ in range(3):
+    for i in range(3):
         playing = input("Do you want to play ? (yes/no): \n")
         if playing.lower() == "yes":
             return run_game()
         else:
-            print('Are you sure ?')
+            print(f'Are you sure ?{"(Try again)"if i > 2 else ""}')
     print("Then another time. Have a nice day 🙂")
     return False
 
