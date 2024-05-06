@@ -23,17 +23,19 @@ def run_game():
           "a) General knowledge\n"
           "b) Geography\n"
           "c) Computer")
-    choice = input("Type the type of questions you want to answer: \n")
+    while True:
+        choice = input("Please pick one of the questions you want to answer: \n")
+        if choice.lower() in ["a","b","c"]:
+            break
+        else:
+            print("Invalid input. Please use 'a', 'b' or 'c'.")
+
     if choice.lower() == "a":
         general_questions()
     elif choice.lower() == "b":
         geography_questions()
     elif choice.lower() == "c":
         computer_questions()
-    else:
-        print("Invalid letter what you typed in is not on our list. "
-              "Retry again! Please use a,b or c.")
-        run_game()
 
 
 def q_restart(score, questionnaire):
