@@ -17,11 +17,14 @@ This is a simple quiz game implemented in Python. The game presents the user wit
 
   
 ## Features
+
 - **User Interaction:** The game prompts the user to choose a category of questions they want to answer.
 - **Questionnaire Selection:** Users can select from three different questionnaires: General Knowledge, Geography, or Computer.
 - **Scoring:** Users receive feedback on their answers immediately after each question and are informed of their overall score at the end of the questionnaire.
 - **Questionnaire Restart:** If the user achieves a perfect score or wishes to retry a questionnaire, they are given the option to restart.
+  
 ## How to Play
+
 - Run the run_game() function.
 - Choose a category of questions: General Knowledge, Geography, or Computer.
 - Answer each question by typing the corresponding letter (a, b, c, or d) for multiple-choice questions.
@@ -31,6 +34,7 @@ This is a simple quiz game implemented in Python. The game presents the user wit
 - **Play Again:** Decide whether to play again, explore other categories, or exit the game.
 
 ## Questionnaire
+
 ### <ins>General Knowledge</ins>
             Which is the only body part that is fully grown from birth?
             answer = 'Eyes'
