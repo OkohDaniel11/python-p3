@@ -1,1 +1,1 @@
-web: python quiz.py
+worker: python quiz.py
