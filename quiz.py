@@ -261,5 +261,6 @@ def computer_questions():
     q_restart(score, "Computer")
 
 
-do_you_want_to_play()
+if __name__ == "__main__":
+    do_you_want_to_play()
 
