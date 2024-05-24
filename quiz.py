@@ -7,6 +7,8 @@ def do_you_want_to_play():
         playing = input("Do you want to play ? (yes/no): \n")
         if playing.lower() == "yes":
             return run_game()
+        elif playing.lower() == "no":
+            break
         else:
             print(f'Are you sure ?{"(Try again)"if i > 2 else ""}')
     print("Then another time. Have a nice day 🙂")
@@ -14,11 +16,11 @@ def do_you_want_to_play():
 
 
 def run_game():
-    print("Alright! Let us Begin :)\n")
     """
     Gives user 3 questionnaire to pick if user enters something different
     tries again
     """
+    print("Alright! Let us Begin :)\n")
     print("Here are a list of questionnaires you can run:\n"
           "a) General knowledge\n"
           "b) Geography\n"
