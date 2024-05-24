@@ -4,7 +4,7 @@ def do_you_want_to_play():
     """
     print('Welcome to my Quiz Game 🙂')
     for i in range(3):
-        playing = input("Do you want to play ? (yes/no): \n")
+        playing = input("Do you want to play ? (yes/no):\n")
         if playing.lower() == "yes":
             return run_game()
         elif playing.lower() == "no":
